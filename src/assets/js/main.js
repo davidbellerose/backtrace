@@ -1,5 +1,19 @@
-// test function
-function one(){
-  alert("one");
+// Add event listener
+
+
+// Get string from the input field
+// Controller function
+function getValue(){
+
 };
-// end test
+
+// Revers the string
+// Logic function
+function reverseString(){
+
+};
+// Display the reversed string on the page
+// View function
+function displayString(){
+
+};
