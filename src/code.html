@@ -54,17 +54,79 @@
         <div class="col-lg-8">
             <pre class="line-numbers">
                 <code class="language-javascript">
-                    // test function
-                    function one(){
-                        alert("one");
-                    }
+// Add event listener for the Reverse button
+document.getElementById("btnSubmit").addEventListener("click", getValue);
+
+// Get string from the input field
+// Controller function
+function getValue() {
+    document.getElementById("alert").classList.add("invisible");
+    let userString = document.getElementById("userString").value;
+
+    // Pass the userString to the reverseString helper function
+    let revString = reverseString(userString);
+
+    // Pass the revString to the displayString helper function
+    displayString(revString);
+}
+
+// Revers the string
+// Logic function
+function reverseString(userString) {
+    let revString = [];
+
+    // check if less than 2 letters
+    if (userString.length &lt; 2) {
+    alert("Please enter at least 2 characters");
+    } else {
+    //  A for loop to iterate through the string from back to front
+    //      and concatenate them into the revString variable
+    for (let i = userString.length - 1; i >= 0; i--) {
+        revString += userString[i];
+    }
+    }
+    return revString;
+}
+
+// Display the reversed string on the page
+// View function
+function displayString(revString) {
+    document.getElementById(
+    "msg"
+    ).innerHTML = `The reversed string is "&lt;b>${revString}&lt;/b>"`;
+    document.getElementById("alert").classList.remove("invisible");
+}                    
                 </code>
             </pre>
         </div>
         <div class="col-lg-4">
-            <p>This code is structured in one function</p>
-            <h5>Hello World</h5>
-            <p>Hello World is a function that displays the text "Hello World"</p>
+            <h5>This code is structured in three functions.</h5>
+            <p>The first thing done was to add an event listener to the button so
+                the code will fire when the button is pressed.
+            </p>
+            <p>The next getValue function gets the value from the text input field,
+                 then it will call on a couple of "helper" functions explained below.
+            </p>
+            <p>The first helper function is called reverseString. This function will
+                first check to make sure at least two characters were entered.
+                Then it will loop through the characters entered in the text field backwards from
+                the last character to the first, and then concatenate them into a string. 
+                Finally it will pass on this reverse string to the next displayString helper function.
+            </p>
+            <p>The next helper function is called displayString. This will take the
+                string passed to it from the reverseString helper function, 
+                put them in some html code, and then inject them
+                into the web page for display. 
+            </p>
+            <p>So once the getValue function gets the value from the text field, 
+                it calls the reverseString
+                function to reverse the text, then it calls the displayString
+                function to display the reversed string passed on from the reverseString function
+                into the web page.
+            </p>
+            <h5>Please <a href="#" alt="Contact Me">contact me</a> if you have any questions and/or would like to discuss
+                my skill set and qualifications.
+            </h5>
         </div>
     </div>
   </div>
