@@ -1,5 +1,9 @@
 # JsSiteTemplate
 Js site template for js projects
 
-insert social and nav links
+update nav and social links
+update contact link
+remove dist from .gitignore
+publish
+
 
