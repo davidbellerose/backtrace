@@ -7,6 +7,8 @@ function getValue() {
   document.getElementById("alert").classList.add("invisible");
   let userString = document.getElementById("userString").value;
 
+  // prevent html injection
+  let userString = userString.replace(/</g, "&lt;").replace(/>/g, "&gt;");
   // Pass the userString to the reverseString helper function
   let revString = reverseString(userString);
 
